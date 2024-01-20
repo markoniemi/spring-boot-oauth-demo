@@ -1,0 +1,6 @@
+version: '2'
+services:
+  spring-boot-test:
+    image: markoniemi/spring-boot-test
+    ports:
+      - 8082:8082
