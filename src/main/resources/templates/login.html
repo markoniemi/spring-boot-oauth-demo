@@ -8,21 +8,21 @@
   </head>
   <body>
     <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-    <form name="loginForm" action="/j_spring_security_check" method="POST"
+    <form name="loginForm" th:action="@{/login}" method="POST"
       class="container-fluid col-3 mt-5 form-group">
       <fieldset>
         <div class="input-group">
           <span class="input-group-prepend input-group-text">
             <i class="bi bi-person-fill"></i>
           </span>
-          <input id="j_username" class="form-control" th:placeholder="#{username}" name="j_username" type="text"
+          <input id="username" class="form-control" th:placeholder="#{username}" name="username" type="text"
             autofocus />
         </div>
         <div class="input-group">
           <span class="input-group-prepend input-group-text">
             <i class="bi bi-lock-fill"></i>
           </span>
-          <input id="j_password" class="form-control" th:placeholder="#{password}" name="j_password"
+          <input id="password" class="form-control" th:placeholder="#{password}" name="password"
             type="password" value="" />
         </div>
         <div class="input-group mt-2">

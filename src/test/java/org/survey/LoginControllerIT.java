@@ -17,6 +17,7 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import jakarta.annotation.Resource;
 
+@Disabled("login page is not used at the moment")
 public class LoginControllerIT extends AbstractIntegrationTestBase {
   @Resource
   private String url;

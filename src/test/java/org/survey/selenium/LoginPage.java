@@ -9,9 +9,9 @@ public class LoginPage extends AbstractPage {
   }
 
   public void login(String username, String password) {
-    setText(By.id("j_username"), username);
-    setText(By.id("j_password"), password);
-    click(By.id("loginButton"));
+    setText(By.id("username"), username);
+    setText(By.id("password"), password);
+    click(By.className("btn-primary"));
     assertTitle("Users");
   }
 }

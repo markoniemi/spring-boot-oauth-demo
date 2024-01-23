@@ -14,7 +14,7 @@ public abstract class AbstractPage {
 
   public void logout() {
     click(By.id("logout"));
-    assertTitle("Login");
+    assertTitle("Please sign in");
   }
 
   public void users() {

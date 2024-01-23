@@ -29,7 +29,7 @@ import lombok.extern.log4j.Log4j2;
  * Base class for integration tests, enables running multiple tests with @SpringBootTest
  */
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(classes = SpringBootTestApp.class, webEnvironment = WebEnvironment.DEFINED_PORT)
+@SpringBootTest(classes = SpringBootOAuthApp.class, webEnvironment = WebEnvironment.DEFINED_PORT)
 @ContextHierarchy(@ContextConfiguration(classes = IntegrationTestConfig.class))
 @Log4j2
 @ActiveProfiles(profiles = {"h2"})
