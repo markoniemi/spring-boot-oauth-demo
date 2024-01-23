@@ -1,0 +1,55 @@
+logging:
+  level:
+    org.springframework.security: debug
+spring:
+#  security:
+#    oauth2:
+#      authorizationserver:
+#        client:
+#          oidc-client:
+#            registration:
+#              client-id: "oidc-client"
+#              client-secret: "{noop}secret"
+#              client-authentication-methods:
+#                - "client_secret_basic"
+#              authorization-grant-types:
+#                - "authorization_code"
+#                - "refresh_token"
+#              redirect-uris:
+#                - "http://127.0.0.1:8082/login/oauth2/code/oidc-client"
+#              post-logout-redirect-uris:
+#                - "http://127.0.0.1:8082/"
+#              scopes:
+#                - "openid"
+#                - "profile"
+#            require-authorization-consent: true
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
+  thymeleaf:
+    cache: 'false'
+  profiles:
+    default: h2
+cxf:
+  path: /api/soap
+http:
+  protocol: '@http.protocol@'
+app:
+  build:
+    timestamp: '@build.timestamp@'
+    profile: '@build.profile@'
+    number: '@buildNumber@'
+  version: '@project.version@'
+management:
+  health:
+    livenessstate:
+      enabled: 'true'
+    readinessstate:
+      enabled: 'true'
+  endpoint:
+    health:
+      probes:
+        enabled: 'true'
+    info:
+      enabled: 'true'
+server:
+  port: '8082'
